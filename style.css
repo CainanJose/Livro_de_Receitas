@@ -1,0 +1,77 @@
+/* Fundo da página */
+body {
+  background-color: #f5f5f5;
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+/* Cabeçalho */
+#cabecalho-principal {
+  background-color: #333;
+  color: white;
+  padding: 20px;
+  text-align: center;
+}
+
+/* Menu */
+nav ul {
+  list-style: none;
+  padding: 0;
+}
+
+nav ul li {
+  display: inline;
+  margin: 0 15px;
+}
+
+nav ul li a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+/* Receita */
+.receita {
+  background-color: white;
+  width: 80%;
+  max-width: 700px;
+  margin: 20px auto;
+  padding: 20px;
+  border: 2px solid #ddd;
+  border-radius: 10px;
+  box-shadow: 2px 2px 8px rgba(0,0,0,0.1);
+}
+
+.titulo-receita {
+  text-align: center;
+  color: #4CAF50;
+}
+
+.imagem-receita {
+  display: block;
+  margin: 0 auto;
+  width: 300px;
+  height: auto;
+  border: 3px solid #4CAF50;
+  border-radius: 8px;
+}
+
+/* Texto */
+.descricao {
+  text-align: justify;
+  margin: 15px 0;
+  font-size: 16px;
+  color: #555;
+}
+
+/* Rodapé */
+footer {
+  background-color: #333;
+  color: white;
+  text-align: center;
+  padding: 15px;
+  position: relative;
+  bottom: 0;
+  width: 100%;
+}
