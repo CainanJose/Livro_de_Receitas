@@ -17,10 +17,11 @@
       <li><a href="#receitas">Receitas</a></li>
       <li><a href="#dicas">Dicas</a></li>
       <li><a href="#galeria">Galeria</a></li>
+      <li><a href="#contato">Contato</a></li>
       <li><a href="#faq">Perguntas Frequentes</a></li>
       <li><a href="#sobre">Sobre</a></li>
       <li><a href="#redes-sociais">Redes Sociais</a></li>
-      <li><a href="#contato">Contato</a></li>
+      
     </ul>
 
     <!-- Menu para versão mobile (hamburger) -->
@@ -304,6 +305,13 @@
   <footer>
     <p>&copy; 2025 Livro de Receitas. Todos os direitos reservados.</p>
   </footer>
+    <script>
+      const menuToggle = document.querySelector('.menu-toggle');
+      const navLinks = document.querySelector('.nav-links');
 
+      menuToggle.addEventListener('click', () => {
+        navLinks.classList.toggle('active');
+      });
+    </script>
 </body>
 </html>

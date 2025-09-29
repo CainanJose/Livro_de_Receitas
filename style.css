@@ -447,6 +447,12 @@ footer {
   animation: pulse 2s infinite;
 }
 
+#galeria h2 {
+  text-align: center;
+  font-size: 2rem; /* opcional, só pra destacar mais */
+  margin-bottom: 1.5rem; /* espaço entre o título e a galeria */
+}
+
 @keyframes pulse {
   0%, 100% { color: #fff; }
   50% { color: #f39c12; }
