@@ -1,11 +1,11 @@
-/* Reset básico */
+/* Reset básico - tira margens e espaçamentos padrões */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
-/* Corpo */
+/* Corpo do site */
 body {
   font-family: 'Arial', sans-serif;
   background-color: #f5f5f5;
@@ -13,7 +13,7 @@ body {
   color: #333;
 }
 
-/* Cabeçalho */
+/* Cabeçalho principal */
 #cabecalho-principal {
   background-color: #333;
   color: white;
@@ -21,6 +21,7 @@ body {
   text-align: center;
 }
 
+/* Menu de navegação */
 nav ul {
   list-style: none;
   display: flex;
@@ -41,7 +42,7 @@ nav ul li a:hover {
   border-radius: 5px;
 }
 
-/* Seção Receitas */
+/* Card de receita */
 .receita {
   background-color: white;
   width: 80%;
@@ -54,17 +55,20 @@ nav ul li a:hover {
   transition: transform 0.3s, box-shadow 0.3s;
 }
 
+/* Efeito ao passar o mouse no card */
 .receita:hover {
   transform: scale(1.02);
   box-shadow: 5px 5px 15px rgba(0,0,0,0.2);
 }
 
+/* Título da receita */
 .titulo-receita {
   text-align: center;
   color: #4CAF50;
   margin-bottom: 10px;
 }
 
+/* Imagem da receita */
 .imagem-receita {
   display: block;
   margin: 0 auto 15px auto;
@@ -74,6 +78,7 @@ nav ul li a:hover {
   border-radius: 10px;
 }
 
+/* Texto de descrição */
 .descricao {
   text-align: justify;
   font-size: 16px;
@@ -81,7 +86,7 @@ nav ul li a:hover {
   margin-bottom: 15px;
 }
 
-/* Ingredientes e preparo */
+/* Listas (ingredientes e preparo) */
 ul, ol {
   margin-left: 20px;
   margin-bottom: 15px;
@@ -92,7 +97,7 @@ h4 {
   margin-bottom: 5px;
 }
 
-/* Dicas */
+/* Seção de dicas */
 #dicas {
   width: 80%;
   margin: 30px auto;
@@ -102,7 +107,7 @@ h4 {
   box-shadow: 2px 2px 10px rgba(0,0,0,0.1);
 }
 
-/* Galeria */
+/* Galeria de imagens */
 .grid-galeria {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
@@ -110,7 +115,7 @@ h4 {
   margin: 20px 0;
 }
 
-/* Contato */
+/* Formulário de contato */
 .form-contato {
   display: flex;
   flex-direction: column;
@@ -150,7 +155,7 @@ footer {
   width: 100%;
 }
 
-/* Responsividade */
+/* Responsividade para telas menores */
 @media(max-width: 768px) {
   .receita {
     width: 90%;
@@ -161,7 +166,7 @@ footer {
   }
 }
 
-/* Efeitos nos cards */
+/* Efeitos extras nos cards */
 .receita {
   transition: transform 0.4s ease, box-shadow 0.4s ease, background-color 0.4s ease;
 }
@@ -172,7 +177,7 @@ footer {
   background-color: #fdfdfd;
 }
 
-/* Imagem com efeito hover */
+/* Efeito hover nas imagens */
 .imagem-receita {
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
@@ -182,7 +187,7 @@ footer {
   box-shadow: 0 8px 15px rgba(0,0,0,0.3);
 }
 
-/* Botão de formulário animado */
+/* Botão com animação */
 .form-contato button {
   transition: all 0.3s ease;
 }
@@ -193,7 +198,7 @@ footer {
   box-shadow: 0 5px 15px rgba(0,0,0,0.2);
 }
 
-/* Animação de entrada das receitas */
+/* Animação de entrada nos cards */
 .receita {
   opacity: 0;
   transform: translateY(20px);
@@ -219,7 +224,8 @@ footer {
   transform: scale(1.1);
   filter: brightness(1.2);
 }
-/* Galeria de receitas */
+
+/* Versão refinada da galeria */
 .grid-galeria {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
@@ -231,18 +237,19 @@ footer {
 
 .grid-galeria img {
   width: 100%;
-  max-width: 150px; /* tamanho máximo das imagens */
+  max-width: 150px;
   height: auto;
   border-radius: 8px;
   transition: transform 0.3s, box-shadow 0.3s;
-  object-fit: cover; /* mantém a proporção da imagem sem distorcer */
+  object-fit: cover;
 }
 
 .grid-galeria img:hover {
   transform: scale(1.1);
   box-shadow: 0 5px 15px rgba(0,0,0,0.3);
 }
-/* ===== Seção Contato ===== */
+
+/* Seção de contato */
 #contato {
   background-color: #f9f9f9;
   padding: 40px 20px;
@@ -257,12 +264,14 @@ footer {
   margin-bottom: 25px;
 }
 
+/* Labels do formulário */
 .form-contato label {
   display: block;
   margin: 10px 0 5px;
   font-weight: bold;
 }
 
+/* Inputs e textarea */
 .form-contato input,
 .form-contato textarea {
   width: 100%;
@@ -279,6 +288,7 @@ footer {
   box-shadow: 0 0 5px rgba(76,175,80,0.5);
 }
 
+/* Botão do formulário */
 .form-contato button {
   display: block;
   margin: 0 auto;
@@ -297,7 +307,7 @@ footer {
   transform: scale(1.05);
 }
 
-/* ===== Seção FAQ ===== */
+/* Seção FAQ */
 #faq {
   background-color: #fff;
   padding: 40px 20px;
@@ -312,6 +322,7 @@ footer {
   margin-bottom: 25px;
 }
 
+/* Perguntas e respostas */
 #faq dt {
   font-weight: bold;
   margin-top: 15px;
@@ -329,7 +340,7 @@ footer {
   color: #555;
 }
 
-/* ===== Seção Sobre ===== */
+/* Seção Sobre */
 #sobre {
   background-color: #f0f0f0;
   padding: 40px 20px;
@@ -350,7 +361,7 @@ footer {
   margin-bottom: 15px;
 }
 
-/* ===== Seção Redes Sociais ===== */
+/* Redes sociais */
 #redes-sociais {
   background-color: #333;
   padding: 30px 20px;
@@ -384,7 +395,7 @@ footer {
 
 /* Seção História */
 #historia {
-  background-color: #fff3e0; /* cor suave de fundo */
+  background-color: #fff3e0;
   padding: 40px 20px;
   border-radius: 15px;
   margin: 30px auto;
@@ -422,7 +433,8 @@ footer {
   color: #333;
   margin-bottom: 15px;
 }
-/* Header */
+
+/* Header fixo com sombra */
 #cabecalho-principal {
   background-color: #333;
   color: white;
@@ -433,6 +445,7 @@ footer {
   box-shadow: 0 2px 8px rgba(0,0,0,0.2);
 }
 
+/* Container do header */
 .header-container {
   display: flex;
   justify-content: space-between;
@@ -441,23 +454,27 @@ footer {
   margin: 0 auto;
 }
 
+/* Logo com animação */
 .logo h1 {
   font-size: 1.8em;
   margin: 0;
   animation: pulse 2s infinite;
 }
 
+/* Título da galeria */
 #galeria h2 {
   text-align: center;
   font-size: 2rem; 
   margin-bottom: 1.5rem; 
 }
 
+/* Animação de pulsar */
 @keyframes pulse {
   0%, 100% { color: #fff; }
   50% { color: #f39c12; }
 }
 
+/* Links do menu */
 .nav-links {
   list-style: none;
   display: flex;
@@ -477,6 +494,7 @@ footer {
   transition: color 0.3s;
 }
 
+/* Linha animada embaixo do link */
 .nav-links li a::after {
   content: '';
   display: block;
@@ -497,7 +515,7 @@ footer {
   width: 100%;
 }
 
-/* Menu hamburguer para mobile */
+/* Menu hamburguer (mobile) */
 .menu-toggle {
   display: none;
   flex-direction: column;
@@ -512,7 +530,7 @@ footer {
   border-radius: 2px;
 }
 
-/* Responsivo */
+/* Menu responsivo */
 @media (max-width: 768px) {
   .nav-links {
     position: absolute;
