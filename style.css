@@ -555,3 +555,187 @@ footer {
     display: flex;
   }
 }
+/* ==============================
+   🧱 BOX MODEL DEMONSTRAÇÃO
+   ============================== */
+
+/* 1. Card da receita (content + padding + border + margin) */
+.receita {
+  background-color: #fff;
+  border: 3px solid #4CAF50;
+  padding: 25px; 
+  margin: 25px auto;
+  border-radius: 12px;
+  max-width: 700px;
+}
+
+/* 2. Título da receita */
+.titulo-receita {
+  background-color: #e8f5e9;
+  padding: 10px;
+  border-bottom: 4px double #388e3c;
+  margin-bottom: 15px;
+  text-align: center;
+}
+
+/* 3. Descrição */
+.descricao {
+  background-color: #f9f9f9;
+  padding: 15px;
+  border-left: 4px solid #4CAF50;
+  margin: 10px 0;
+}
+
+/* 4. Imagem da receita */
+.imagem-receita {
+  display: block;
+  margin: 15px auto;
+  padding: 5px;
+  border: 4px solid #ccc;
+  border-radius: 10px;
+}
+
+/* 5. Lista de ingredientes */
+ul {
+  background-color: #f0f8f5;
+  padding: 15px 25px;
+  border: 2px dashed #4CAF50;
+  margin-bottom: 20px;
+  border-radius: 8px;
+}
+
+/* 6. Lista de preparo */
+ol {
+  background-color: #fdfdfd;
+  padding: 15px;
+  border: 2px solid #999;
+  margin-bottom: 15px;
+  border-radius: 8px;
+}
+
+/* 7. Seção de dicas */
+#dicas {
+  background-color: #fffbea;
+  padding: 25px;
+  border: 3px solid #ffb300;
+  margin: 30px auto;
+  border-radius: 10px;
+  max-width: 700px;
+}
+
+/* 8. Itens das dicas */
+#dicas li {
+  background-color: #fff;
+  padding: 10px;
+  border-left: 3px solid #ffb300;
+  margin: 8px 0;
+}
+
+/* 9. Galeria */
+#galeria {
+  background-color: #e3f2fd;
+  padding: 25px;
+  border: 3px solid #2196f3;
+  margin: 40px auto;
+  border-radius: 12px;
+  max-width: 900px;
+}
+
+/* 10. Imagens da galeria */
+.grid-galeria img {
+  border: 3px solid #2196f3;
+  padding: 5px;
+  margin: 10px;
+  border-radius: 8px;
+}
+
+/* 11. Contato */
+#contato {
+  background-color: #f1f8e9;
+  padding: 25px;
+  border: 3px solid #8bc34a;
+  margin: 30px auto;
+  border-radius: 10px;
+  max-width: 700px;
+}
+
+/* 12. Inputs */
+.form-contato input,
+.form-contato textarea {
+  padding: 10px;
+  border: 2px solid #ccc;
+  margin-bottom: 10px;
+  border-radius: 6px;
+}
+
+/* 13. Botão */
+.form-contato button {
+  background-color: #4CAF50;
+  color: white;
+  padding: 12px 20px;
+  border: 2px solid #388e3c;
+  margin-top: 10px;
+  border-radius: 8px;
+}
+
+/* 14. FAQ */
+#faq {
+  background-color: #fff;
+  border: 3px solid #cfd8dc;
+  padding: 30px;
+  margin: 30px auto;
+  border-radius: 10px;
+  max-width: 700px;
+}
+
+/* 15. Pergunta */
+#faq dt {
+  border-bottom: 2px dashed #4CAF50;
+  margin-bottom: 8px;
+  padding-bottom: 5px;
+}
+
+/* 16. Resposta */
+#faq dd {
+  padding: 5px 10px;
+  margin-bottom: 10px;
+  border-left: 3px solid #81c784;
+}
+
+/* 17. Seção Sobre */
+#sobre {
+  background-color: #f3e5f5;
+  padding: 25px;
+  border: 3px solid #8e24aa;
+  margin: 30px auto;
+  border-radius: 10px;
+  max-width: 700px;
+}
+
+/* 18. Redes Sociais */
+#redes-sociais {
+  background-color: #212121;
+  padding: 25px;
+  border: 3px solid #757575;
+  margin: 25px auto;
+  border-radius: 10px;
+  text-align: center;
+}
+
+/* 19. Botões sociais */
+.btn-social {
+  padding: 10px 15px;
+  border: 2px solid #4CAF50;
+  margin: 5px;
+  border-radius: 6px;
+  display: inline-block;
+}
+
+/* 20. Rodapé */
+footer {
+  background-color: #333;
+  padding: 20px;
+  border-top: 4px solid #4CAF50;
+  margin-top: 40px;
+  text-align: center;
+}
