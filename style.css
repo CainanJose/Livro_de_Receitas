@@ -595,8 +595,8 @@ footer {
   border-radius: 10px;
 }
 
-/* 5. Lista de ingredientes */
-ul {
+/* 5. Lista de ingredientes (aplica apenas dentro de receitas) */
+.receita ul {
   background-color: #f0f8f5;
   padding: 15px 25px;
   border: 2px dashed #4CAF50;
@@ -604,13 +604,15 @@ ul {
   border-radius: 8px;
 }
 
-/* 6. Lista de preparo */
-ol {
+.receita ol {
   background-color: #fdfdfd;
-  padding: 15px;
+  padding: 18px 22px;              /* Mais espaçamento interno */
   border: 2px solid #999;
-  margin-bottom: 15px;
+  margin: 20px auto;               /* Mais espaçamento externo */
   border-radius: 8px;
+  width: 90%;                      /* Evita encostar na borda do card */
+  box-shadow: 2px 2px 8px rgba(0,0,0,0.08); /* Sombra leve pra destacar */
+  list-style-position: inside;     /* Números alinhados dentro da caixa */
 }
 
 /* 7. Seção de dicas */
@@ -738,4 +740,99 @@ footer {
   border-top: 4px solid #4CAF50;
   margin-top: 40px;
   text-align: center;
+}
+
+
+/* ==============================
+   💪 FLEXBOX DEMONSTRAÇÃO
+   ============================== */
+
+/* 1. Cabeçalho principal: organiza título e menu em linha */
+#cabecalho-principal {
+  display: flex;                /* (1) Ativa o Flexbox */
+  flex-direction: column;       /* (2) Empilha os elementos verticalmente */
+  align-items: center;          /* (3) Centraliza os itens na horizontal */
+  justify-content: center;      /* (4) Centraliza na vertical */
+}
+
+/* 2. Navegação */
+nav ul {
+  display: flex;                /* (5) Deixa os links em linha */
+  justify-content: center;      /* (6) Centraliza o grupo */
+  align-items: center;          /* (7) Alinha verticalmente */
+  flex-wrap: wrap;              /* (8) Quebra linha se faltar espaço */
+  gap: 15px;                    /* (9) Espaçamento uniforme */
+}
+
+/* 3. Container de receitas */
+#receitas {
+  display: flex;                /* (10) Cria um layout flexível */
+  flex-wrap: wrap;              /* (11) Quebra linhas */
+  justify-content: space-evenly;/* (12) Espaça igualmente os cards */
+  align-items: stretch;         /* (13) Faz todos os cards terem mesma altura */
+  gap: 20px;                    /* (14) Espaço entre cards */
+  margin: 30px auto;
+}
+
+/* 4. Cada card de receita */
+.receita {
+  flex: 1 1 300px;              /* (15) Faz o card crescer/encolher com limite mínimo */
+  display: flex;
+  flex-direction: column;       /* (16) Mantém o conteúdo interno em coluna */
+  justify-content: space-between; /* (17) Espaça o conteúdo interno */
+}
+
+/* 5. Seção de Dicas */
+#dicas {
+  display: flex;
+  flex-direction: column;       /* (18) Empilha conteúdo */
+  align-items: center;          /* (19) Centraliza tudo */
+  justify-content: center;      /* (20) Centraliza verticalmente */
+}
+
+/* 6. Galeria de imagens */
+.grid-galeria {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+
+/* 7. Itens da galeria */
+.grid-galeria img {
+  flex: 0 1 150px;
+}
+
+/* 8. Seção de contato */
+#contato {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+/* 9. Formulário de contato */
+.form-contato {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  align-items: stretch;
+}
+
+/* 10. Redes sociais */
+#redes-sociais {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+/* 11. Botões sociais */
+#redes-sociais .btn-social {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  margin: 5px;
+  padding: 10px 15px;
 }
