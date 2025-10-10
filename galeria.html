@@ -8,6 +8,9 @@
 </head>
 <body>
 
+<!-- ===================================== -->
+<!-- 🧭 CABEÇALHO E MENU DE NAVEGAÇÃO -->
+<!-- ===================================== -->
 <header id="cabecalho-principal">
   <h1>🍲 Livro de Receitas</h1>
   <nav>
@@ -22,28 +25,49 @@
   </nav>
 </header>
 
+<!-- ===================================== -->
+<!-- 🖼️ GALERIA DE IMAGENS E VÍDEOS -->
+<!-- ===================================== -->
 <main>
   <section id="galeria">
     <h2>Galeria de Receitas</h2>
+
     <div class="grid-galeria">
       <img src="imagens/bolo.jpg" alt="Bolo de Chocolate">
-      <img src="imagens/salada.jpg" alt="Salada Tropical">
       <img src="imagens/panqueca.jpg" alt="Panqueca de Frango">
+      <img src="imagens/salada.jpg" alt="Salada Tropical">
       <img src="imagens/macarrão.jpg" alt="Macarrão à Bolonhesa">
+      <img src="imagens/risoto.jpg" alt="Risoto de Cogumelos">
+      <img src="imagens/panetone.jpg" alt="Panetone Caseiro">
+      <img src="imagens/mousse.jpg" alt="Mousse de Maracujá">
     </div>
 
     <h3>🎬 Vídeos de Culinária</h3>
-    <div class="videos">
-      <iframe width="300" height="200" src="https://www.youtube.com/embed/8lG3bXwlO4g" title="Bolo de Chocolate"></iframe>
-      <iframe width="300" height="200" src="https://www.youtube.com/embed/h1n2m3sX2fY" title="Dicas de Culinária"></iframe>
+    <div class="videos" style="display:flex; flex-wrap:wrap; justify-content:center; gap:15px;">
+      <iframe width="300" height="200" src="https://www.youtube.com/embed/8lG3bXwlO4g" title="Como fazer bolo de chocolate" allowfullscreen></iframe>
+      <iframe width="300" height="200" src="https://www.youtube.com/embed/Z4r0a5P0ZbI" title="Dicas de cozinha prática" allowfullscreen></iframe>
+      <iframe width="300" height="200" src="https://www.youtube.com/embed/mVDH7yPhMgo" title="Como preparar risoto perfeito" allowfullscreen></iframe>
+    </div>
+
+    <h3>🎧 Áudios de Inspiração</h3>
+    <div class="audios" style="text-align:center; margin-top:20px;">
+      <audio controls>
+        <source src="audios/intro-culinaria.mp3" type="audio/mpeg">
+        Seu navegador não suporta áudio.
+      </audio>
+      <p>🔊 Dica sonora: cozinhar é como música — cada ingrediente tem seu ritmo!</p>
     </div>
   </section>
 </main>
 
+<!-- ===================================== -->
+<!-- ⚙️ RODAPÉ -->
+<!-- ===================================== -->
 <footer>
   <p>&copy; 2025 Livro de Receitas. Todos os direitos reservados.</p>
 </footer>
 
+<!-- Scripts -->
 <script src="js/script.js"></script>
 </body>
 </html>
