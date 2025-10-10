@@ -836,3 +836,41 @@ nav ul {
   margin: 5px;
   padding: 10px 15px;
 }
+/* ==============================
+   🔍 ESTILO DO FILTRO DE RECEITAS
+   ============================== */
+#filtro-receitas {
+  background-color: #f9f9f9;
+  padding: 25px;
+  border-radius: 10px;
+  margin: 30px auto;
+  max-width: 700px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+  text-align: center;
+}
+
+#filtro-receitas h2 {
+  color: #4CAF50;
+  margin-bottom: 15px;
+}
+
+.filtro-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
+  margin-bottom: 15px;
+}
+
+#buscaReceita, #categoriaReceita {
+  padding: 10px;
+  border: 2px solid #ccc;
+  border-radius: 8px;
+  font-size: 16px;
+  width: 250px;
+}
+
+#resultadoFiltro {
+  font-weight: bold;
+  color: #333;
+}
