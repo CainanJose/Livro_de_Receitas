@@ -3,312 +3,46 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Livro de Receitas</title>
-  <link rel="stylesheet" href="style.css">
+  <title>Livro de Receitas - Início</title>
+  <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
 
-  <!-- Link para navegação -->
-<header id="cabecalho-principal">
-  <h1>🍲 Livro de Receitas</h1>
-  <nav>
-    <ul class="nav-links">
-      <li><a href="#">Início</a></li>
-      <li><a href="#historia">História</a></li> 
-      <li><a href="#receitas">Receitas</a></li>
-      <li><a href="#dicas">Dicas</a></li>
-      <li><a href="#galeria">Galeria</a></li>
-      <li><a href="#contato">Contato</a></li>
-      <li><a href="#faq">Perguntas Frequentes</a></li>
-      <li><a href="#sobre">Sobre</a></li>
-      <li><a href="#redes-sociais">Redes Sociais</a></li>
-      
-    </ul>
-
-    <!-- Menu para versão mobile (hamburger) -->
-    <div class="menu-toggle">
-      <span></span>
-      <span></span>
-      <span></span>
-    </div>
-  </nav>
-</header>
+  <!-- Cabeçalho -->
+  <header id="cabecalho-principal">
+    <h1>🍲 Livro de Receitas</h1>
+    <nav>
+      <ul class="nav-links">
+        <li><a href="index.html" class="active">Início</a></li>
+        <li><a href="receitas.html">Receitas</a></li>
+        <li><a href="dicas.html">Dicas</a></li>
+        <li><a href="galeria.html">Galeria</a></li>
+        <li><a href="contato.html">Contato</a></li>
+      </ul>
+      <div class="menu-toggle"><span></span><span></span><span></span></div>
+    </nav>
+  </header>
 
   <main>
-    <!-- Seção de Receitas -->
-
     <section id="historia">
-        <h2>História do Livro de Receitas</h2>
-        <p>O Livro de Receitas nasceu da paixão por culinária e da vontade de compartilhar experiências na cozinha. 
-            Nosso objetivo é inspirar pessoas a cozinharem pratos deliciosos, mesmo sem experiência prévia.</p>
-        <p>Ao longo dos anos, reunimos receitas clássicas, dicas práticas e técnicas que tornam a cozinha divertida e acessível. 
-            Cada receita aqui é cuidadosamente testada para garantir sabor e praticidade.</p>
-        <p>Explore nossas receitas e descubra o prazer de cozinhar com criatividade!</p>
+      <h2>História do Livro de Receitas</h2>
+      <p>O Livro de Receitas nasceu da paixão pela culinária e da vontade de compartilhar experiências na cozinha.</p>
+      <p>Nosso objetivo é inspirar pessoas a cozinhar pratos deliciosos, mesmo sem experiência prévia.</p>
+      <p>Reunimos receitas clássicas, dicas práticas e técnicas que tornam a cozinha divertida e acessível.</p>
+      <p>Explore, aprenda e divirta-se cozinhando!</p>
     </section>
 
-    <section id="receitas">
-
-      <!-- Receitas -->
-  <section class="receita">
-    <h3 class="titulo-receita">Bolo de Chocolate</h3>
-    <img src="/imagens/bolo.jpg" alt="Bolo de Chocolate" class="imagem-receita">
-    <p class="descricao">Um bolo fofinho e delicioso para acompanhar o café da tarde.</p>
-
-    <p>⏱ <strong>Tempo de preparo:</strong> 15 min | <strong>Tempo de forno:</strong> 40 min</p>
-    <p>🍽 <strong>Porções:</strong> 8</p>
-
-    <h4>Ingredientes</h4>
-    <ul>
-      <li>2 xícaras de farinha de trigo</li>
-      <li>1 xícara de açúcar</li>
-      <li>1 xícara de chocolate em pó</li>
-      <li>1/2 xícara de óleo</li>
-      <li>3 ovos</li>
-      <li>1 xícara de leite</li>
-      <li>1 colher de sopa de fermento em pó</li>
-    </ul>
-
-    <h4>Modo de Preparo</h4>
-    <ol>
-      <li>Misture todos os ingredientes secos.</li>
-      <li>Adicione os líquidos e mexa até formar uma massa homogênea.</li>
-      <li>Coloque em forma untada e leve ao forno pré-aquecido a 180°C por 40 minutos.</li>
-    </ol>
-    <p>💡 Dica: Para um sabor mais intenso, adicione 50g de chocolate meio amargo derretido à massa.</p>
-  </section>
-
-  
-  <section class="receita">
-    <h3 class="titulo-receita">Panqueca de Frango</h3>
-    <img src="imagens/panqueca.jpg" alt="Panqueca de Frango" class="imagem-receita">
-    <p class="descricao">Panquecas saborosas, recheadas com frango e molho especial.</p>
-
-    <p>⏱ <strong>Tempo de preparo:</strong> 20 min | <strong>Cozimento:</strong> 10 min</p>
-    <p>🍽 <strong>Porções:</strong> 6</p>
-
-    <h4>Ingredientes</h4>
-    <ul>
-      <li>2 xícaras de farinha de trigo</li>
-      <li>2 ovos</li>
-      <li>1 xícara de leite</li>
-      <li>1 pitada de sal</li>
-      <li>500g de frango desfiado</li>
-      <li>Molho de tomate a gosto</li>
-    </ul>
-
-    <h4>Modo de Preparo</h4>
-    <ol>
-      <li>Misture os ingredientes da massa até ficar homogêneo.</li>
-      <li>Prepare as panquecas em frigideira antiaderente.</li>
-      <li>Recheie com frango e molho. Enrole e sirva.</li>
-    </ol>
-    <p>💡 Dica: Para variar, acrescente queijo ralado ao recheio antes de enrolar.</p>
-  </section>
-
-  <section class="receita">
-    <h3 class="titulo-receita">Salada Tropical</h3>
-    <img src="imagens/salada.jpg" alt="Salada Tropical" class="imagem-receita">
-    <p class="descricao">Uma salada fresca e colorida para dias quentes.</p>
-
-    <p>⏱ <strong>Tempo de preparo:</strong> 15 min | <strong>Pronta para servir:</strong> Imediato</p>
-    <p>🍽 <strong>Porções:</strong> 4</p>
-
-    <h4>Ingredientes</h4>
-    <ul>
-      <li>1 alface americana</li>
-      <li>1 manga cortada em cubos</li>
-      <li>1 cenoura ralada</li>
-      <li>Tomate cereja a gosto</li>
-      <li>Molho de iogurte</li>
-    </ul>
-
-    <h4>Modo de Preparo</h4>
-    <ol>
-      <li>Lave bem os vegetais.</li>
-      <li>Misture todos os ingredientes em uma tigela grande.</li>
-      <li>Adicione o molho e sirva gelada.</li>
-    </ol>
-    <p>💡 Dica: Experimente adicionar castanhas ou sementes para um toque crocante.</p>
-  </section>
-
-  <section class="receita">
-    <h3 class="titulo-receita">Macarrão à Bolonhesa</h3>
-    <img src="imagens/macarrão.jpg" alt="Macarrão à Bolonhesa" class="imagem-receita">
-    <p class="descricao">Clássico macarrão com molho de carne moída e temperos aromáticos.</p>
-
-    <p>⏱ <strong>Tempo de preparo:</strong> 20 min | <strong>Cozimento:</strong> 15 min</p>
-    <p>🍽 <strong>Porções:</strong> 4</p>
-
-    <h4>Ingredientes</h4>
-    <ul>
-      <li>300g de macarrão</li>
-      <li>200g de carne moída</li>
-      <li>1 cebola picada</li>
-      <li>2 dentes de alho</li>
-      <li>Molho de tomate a gosto</li>
-      <li>Sal, pimenta e azeite</li>
-    </ul>
-
-    <h4>Modo de Preparo</h4>
-    <ol>
-      <li>Cozinhe o macarrão conforme instruções da embalagem.</li>
-      <li>Refogue a cebola e o alho no azeite, adicione a carne e doure.</li>
-      <li>Acrescente o molho e cozinhe por 10 minutos. Sirva sobre o macarrão.</li>
-    </ol>
-    <p>💡 Dica: Polvilhe parmesão ralado na hora de servir para um sabor extra.</p>
-  </section>
-
-  <section class="receita">
-    <h3 class="titulo-receita">Risoto de Cogumelos</h3>
-    <img src="imagens/risoto.jpg" alt="Risoto de Cogumelos" class="imagem-receita">
-    <p class="descricao">Risoto cremoso com cogumelos frescos e parmesão ralado.</p>
-
-    <p>⏱ <strong>Tempo de preparo:</strong> 15 min | <strong>Cozimento:</strong> 25 min</p>
-    <p>🍽 <strong>Porções:</strong> 4</p>
-
-    <h4>Ingredientes</h4>
-    <ul>
-      <li>1 xícara de arroz arbóreo</li>
-      <li>200g de cogumelos fatiados</li>
-      <li>1 cebola picada</li>
-      <li>2 colheres de sopa de manteiga</li>
-      <li>1/2 xícara de vinho branco</li>
-      <li>Parmesão ralado a gosto</li>
-    </ul>
-
-    <h4>Modo de Preparo</h4>
-    <ol>
-      <li>Refogue a cebola na manteiga, adicione os cogumelos e cozinhe.</li>
-      <li>Acrescente o arroz e o vinho, mexendo sempre.</li>
-      <li>Vá adicionando caldo aos poucos até o arroz ficar cremoso. Finalize com parmesão.</li>
-    </ol>
-    <p>💡 Dica: Use cogumelos frescos variados para um sabor mais complexo.</p>
-  </section>
-
-  <section class="receita">
-    <h3 class="titulo-receita">Panetone Caseiro</h3>
-    <img src="imagens/panetone.jpg" alt="Panetone Caseiro" class="imagem-receita">
-    <p class="descricao">Delicioso panetone com frutas cristalizadas e sabor irresistível.</p>
-
-    <p>⏱ <strong>Tempo de preparo:</strong> 30 min | <strong>Descanso:</strong> 2 h | <strong>Assar:</strong> 40 min</p>
-    <p>🍽 <strong>Porções:</strong> 8</p>
-
-    <h4>Ingredientes</h4>
-    <ul>
-      <li>500g de farinha de trigo</li>
-      <li>100g de açúcar</li>
-      <li>200ml de leite morno</li>
-      <li>3 ovos</li>
-      <li>100g de manteiga</li>
-      <li>Fermento biológico</li>
-      <li>Frutas cristalizadas a gosto</li>
-    </ul>
-
-    <h4>Modo de Preparo</h4>
-    <ol>
-      <li>Misture todos os ingredientes e sove bem a massa.</li>
-      <li>Deixe crescer por 2 horas.</li>
-      <li>Acrescente as frutas, coloque em forma e asse a 180°C por 40 minutos.</li>
-    </ol>
-    <p>💡 Dica: Para um aroma especial, adicione raspas de laranja à massa.</p>
-  </section>
-
-  <section class="receita">
-    <h3 class="titulo-receita">Mousse de Maracujá</h3>
-    <img src="imagens/mousse.jpg" alt="Mousse de Maracujá" class="imagem-receita">
-    <p class="descricao">Sobremesa leve, cremosa e com sabor tropical refrescante.</p>
-
-    <p>⏱ <strong>Tempo de preparo:</strong> 10 min | <strong>Geladeira:</strong> 3 h</p>
-    <p>🍽 <strong>Porções:</strong> 6</p>
-
-    <h4>Ingredientes</h4>
-    <ul>
-      <li>1 lata de leite condensado</li>
-      <li>1 lata de creme de leite</li>
-      <li>1 medida da lata de suco de maracujá concentrado</li>
-      <li>Gelatina sem sabor (opcional)</li>
-    </ul>
-
-    <h4>Modo de Preparo</h4>
-    <ol>
-      <li>Bata todos os ingredientes no liquidificador até ficar cremoso.</li>
-      <li>Despeje em taças e leve à geladeira por 3 horas.</li>
-      <li>Decore com polpa de maracujá antes de servir.</li>
-    </ol>
-    <p>💡 Dica: Para um toque crocante, adicione raspas de chocolate branco por cima.</p>
-  </section>
-</section>
-
-
-
-    <!-- Seção de Dicas -->
-    <section id="dicas">
-      <h2>Dicas de Cozinha</h2>
-      <ul>
-        <li>Use ingredientes frescos para um sabor mais intenso.</li>
-        <li>Não sobrecarregue a massa, misture delicadamente.</li>
-        <li>Mantenha sempre a cozinha limpa e organizada.</li>
-        <li>Experimente temperos diferentes para variar o sabor.</li>
-        <li>Leia a receita completa antes de começar a cozinhar.</li>
-      </ul>
+    <section id="apresentacao">
+      <h2>Descubra o prazer de cozinhar</h2>
+      <p>Aprenda passo a passo, com imagens, vídeos e dicas incríveis que vão transformar seu jeito de cozinhar!</p>
+      <a href="receitas.html" class="btn-social">Explorar Receitas 🍰</a>
     </section>
-
-    <!-- Galeria -->
-    <section id="galeria">
-      <h2>Galeria de Receitas</h2>
-      <div class="grid-galeria">
-        <img src="imagens/bolo.jpg" alt="Imagem 1">
-        <img src="imagens/panqueca.jpg" alt="Imagem 2">
-        <img src="imagens/salada.jpg" alt="Imagem 3">
-        <img src="imagens/macarrão.jpg" alt="Imagem 4">
-        <img src="imagens/risoto.jpg" alt="Imagem 5">
-        <img src="imagens/panetone.jpg" alt="Imagem 6">
-        <img src="imagens/mousse.jpg" alt="Imagem 7">
-      </div>
-    </section>
-
-    <!-- Contato -->
-    <section id="contato">
-      <h2>Contato</h2>
-      <form class="form-contato">
-        <label for="nome">Nome:</label>
-        <input type="text" id="nome" name="nome" placeholder="Seu nome">
-        <label for="email">Email:</label>
-        <input type="email" id="email" name="email" placeholder="Seu email">
-        <label for="mensagem">Mensagem:</label>
-        <textarea id="mensagem" name="mensagem" placeholder="Escreva sua mensagem"></textarea>
-        <button type="submit">Enviar</button>
-      </form>
-    </section>
-    <!-- Perguntas -->
-    <section id="faq">
-        <h2>Perguntas Frequentes</h2>
-        <dl>
-            <dt>Preciso de experiência para seguir as receitas?</dt>
-            <dd>Não! Todas as receitas são detalhadas e fáceis de seguir.</dd>
-
-            <dt>As receitas podem ser adaptadas para dietas especiais?</dt>
-            <dd>Sim! Sempre indicamos substituições de ingredientes.</dd>
-        </dl>
-    </section>
-    <!-- Sobre -->
-    <section id="sobre">
-        <h2>Sobre o Livro de Receitas</h2>
-        <p>Este site foi criado para compartilhar receitas deliciosas e dicas de cozinha. Ideal para quem ama cozinhar ou está começando na cozinha.</p>
-        <p>Nosso objetivo é tornar a experiência culinária simples e divertida, oferecendo instruções claras e imagens inspiradoras.</p>
-    </section>
-    <section id="redes-sociais">
-    <h2>Siga-nos nas redes</h2>
-        <a href="#" class="btn-social">Instagram</a>
-        <a href="#" class="btn-social">Facebook</a>
-        <a href="#" class="btn-social">Pinterest</a>
-    </section>
-
   </main>
 
   <footer>
-    <p>&copy; 2025 Livro de Receitas. Todos os direitos reservados.</p>
+    <p>&copy; 2025 Livro de Receitas | Desenvolvido por Cainã José Arruda Pinto</p>
   </footer>
-  <script src="script.js"></script>
+
+  <script src="js/script.js"></script>
 </body>
 </html>
