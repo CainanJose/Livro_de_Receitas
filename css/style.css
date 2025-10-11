@@ -144,16 +144,27 @@ h4 {
   background-color: #45a049;
 }
 
-/* Rodapé */
+/* =======================
+   Rodapé fixo e elegante
+   ======================= */
 footer {
   background-color: #333;
   color: white;
   text-align: center;
   padding: 20px;
-  margin-top: 30px;
-  position: relative;
+  border-top: 4px solid #4CAF50;
   width: 100%;
+  position: fixed;          /* 🔹 fixa o rodapé */
+  bottom: 0;                /* 🔹 cola na parte inferior */
+  left: 0;
+  z-index: 999;
 }
+
+/* Evita que o rodapé sobreponha o conteúdo */
+body {
+  padding-bottom: 80px; /* cria espaço para o rodapé fixo */
+}
+
 
 /* Responsividade para telas menores */
 @media(max-width: 768px) {
@@ -873,4 +884,46 @@ nav ul {
 #resultadoFiltro {
   font-weight: bold;
   color: #333;
+}
+
+
+/* =======================
+   🍰 Seção de Apresentação (index.html)
+   ======================= */
+#apresentacao {
+  text-align: center;
+  margin: 40px auto;
+  padding: 40px 20px;
+  background-color: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+  max-width: 800px;
+}
+
+#apresentacao h2 {
+  color: #333;
+  font-size: 1.8rem;
+  margin-bottom: 15px;
+}
+
+#apresentacao p {
+  color: #555;
+  margin-bottom: 20px;
+  font-size: 1.1rem;
+  line-height: 1.6;
+}
+
+#apresentacao .btn-social {
+  background-color: #4CAF50;
+  color: white;
+  padding: 12px 25px;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: background 0.3s ease, transform 0.3s ease;
+}
+
+#apresentacao .btn-social:hover {
+  background-color: #45a049;
+  transform: scale(1.05);
 }
