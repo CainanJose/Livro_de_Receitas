@@ -249,3 +249,68 @@ resetarInatividade();
 // ✅ FINALIZAÇÃO
 // ======================================================
 log("Script carregado. Todas as funcionalidades ativas!");
+
+// ======================================================
+// 🌡️ MENSAGEM AUTOMÁTICA BASEADA NO HORÁRIO
+// ======================================================
+function mensagemHorario() {
+  const hora = new Date().getHours();
+  let msg;
+  if (hora < 12) msg = "☀️ Bom dia! Hora de preparar o café!";
+  else if (hora < 18) msg = "🍝 Boa tarde! Que tal uma nova receita?";
+  else msg = "🌙 Boa noite! Experimente uma sobremesa!";
+  mostrarToast(msg, 4000);
+}
+setTimeout(mensagemHorario, 5000);
+
+// ======================================================
+// 🧠 12️⃣ DICA ALEATÓRIA AO ABRIR O SITE
+// ======================================================
+const dicasRapidas = [
+  "🍋 Um toque de limão realça o sabor dos pratos salgados!",
+  "🥣 Misture ingredientes secos antes dos líquidos.",
+  "🧈 Sempre unte formas com manteiga e farinha para não grudar.",
+  "🔥 Pré-aqueça o forno para assar com temperatura ideal.",
+  "🌿 Ervas frescas devem ser adicionadas no final da receita."
+];
+window.addEventListener('load', () => {
+  const dica = dicasRapidas[Math.floor(Math.random() * dicasRapidas.length)];
+  mostrarToast(`💡 Dica do dia: ${dica}`, 6000);
+});
+// ======================================================
+// 🎲 13️⃣ MINI JOGO: SORTEIE UMA RECEITA PARA FAZER HOJE
+// ======================================================
+// Só executa se estiver na página de receitas
+if (document.getElementById('receitas')) {
+  (function jogoSorteio() {
+    const btn = document.createElement('button');
+    btn.textContent = "🎲 Sortear Receita";
+    Object.assign(btn.style, {
+      position: 'fixed',
+      bottom: '80px',
+      right: '20px',
+      background: '#ff9800',
+      color: 'white',
+      border: 'none',
+      padding: '12px 16px',
+      borderRadius: '8px',
+      cursor: 'pointer',
+      fontWeight: 'bold',
+      boxShadow: '0 4px 12px rgba(0,0,0,0.3)',
+      zIndex: 998
+    });
+    document.body.appendChild(btn);
+
+    // Ação ao clicar: sorteia uma receita da página
+    btn.addEventListener('click', () => {
+      const nomes = [...document.querySelectorAll('.titulo-receita')]
+        .map(e => e.textContent);
+      if (nomes.length === 0) {
+        mostrarToast("😅 Nenhuma receita disponível para sortear!");
+        return;
+      }
+      const sorteada = nomes[Math.floor(Math.random() * nomes.length)];
+      mostrarToast(`🍽️ Que tal preparar: ${sorteada}?`);
+    });
+  })();
+}
