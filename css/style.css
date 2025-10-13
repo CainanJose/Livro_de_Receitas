@@ -145,7 +145,7 @@ h4 {
 }
 
 /* =======================
-   Rodapé fixo e elegante
+   📍 Rodapé no fim da página (não fixo)
    ======================= */
 footer {
   background-color: #333;
@@ -154,11 +154,23 @@ footer {
   padding: 20px;
   border-top: 4px solid #4CAF50;
   width: 100%;
-  position: fixed;          /* 🔹 fixa o rodapé */
-  bottom: 0;                /* 🔹 cola na parte inferior */
+  position: relative; /* ❌ tira o fixo, deixa posição normal */
+  bottom: 0;
   left: 0;
-  z-index: 999;
 }
+
+/* Mantém o corpo da página ocupando toda a altura da tela */
+html, body {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Faz o conteúdo principal empurrar o rodapé para baixo */
+main {
+  flex: 1; /* ⬅️ essa linha é a chave */
+}
+
 
 /* Evita que o rodapé sobreponha o conteúdo */
 body {
