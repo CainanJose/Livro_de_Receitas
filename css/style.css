@@ -1154,3 +1154,42 @@ body.dark .imagem-receita {
   background-color: #1a1a1a !important;
   border: 3px solid #4CAF50 !important;
 }
+
+
+/* ==========================================================
+   🎲 BOTÃO DE SORTEIO AO LADO DO FILTRO
+   ========================================================== */
+#filtro-receitas .filtro-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  justify-content: center;
+  align-items: center;
+  margin-top: 10px;
+}
+
+#btnSorteioFiltro {
+  background-color: #ff9800;
+  color: white;
+  border: none;
+  padding: 10px 18px;
+  border-radius: 6px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+#btnSorteioFiltro:hover {
+  background-color: #ffa726;
+  transform: scale(1.05);
+}
+
+/* 🌙 Ajuste no modo escuro */
+body.dark #btnSorteioFiltro {
+  background-color: #ff9800;
+  color: #fff;
+}
+
+body.dark #btnSorteioFiltro:hover {
+  background-color: #ffa726;
+}

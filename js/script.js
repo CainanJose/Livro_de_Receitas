@@ -307,39 +307,51 @@ window.addEventListener('load', () => {
   mostrarToast(`💡 Dica do dia: ${dica}`, 6000);
 });
 // ======================================================
-// 🎲 13️⃣ MINI JOGO: SORTEIE UMA RECEITA PARA FAZER HOJE
+// 🎲 BOTÃO "SORTEAR RECEITA" AO LADO DO FILTRO
 // ======================================================
-// Só executa se estiver na página de receitas
-if (document.getElementById('receitas')) {
-  (function jogoSorteio() {
-    const btn = document.createElement('button');
-    btn.textContent = "🎲 Sortear Receita";
-    Object.assign(btn.style, {
-      position: 'fixed',
-      bottom: '80px',
-      right: '20px',
-      background: '#ff9800',
-      color: 'white',
-      border: 'none',
-      padding: '12px 16px',
-      borderRadius: '8px',
-      cursor: 'pointer',
-      fontWeight: 'bold',
-      boxShadow: '0 4px 12px rgba(0,0,0,0.3)',
-      zIndex: 998
-    });
-    document.body.appendChild(btn);
+window.addEventListener('DOMContentLoaded', () => {
+  const filtroContainer = document.querySelector('.filtro-container');
+  if (!filtroContainer) return; // só aparece na página de receitas
 
-    // Ação ao clicar: sorteia uma receita da página
-    btn.addEventListener('click', () => {
-      const nomes = [...document.querySelectorAll('.titulo-receita')]
-        .map(e => e.textContent);
-      if (nomes.length === 0) {
-        mostrarToast("😅 Nenhuma receita disponível para sortear!");
-        return;
-      }
-      const sorteada = nomes[Math.floor(Math.random() * nomes.length)];
-      mostrarToast(`🍽️ Que tal preparar: ${sorteada}?`);
-    });
-  })();
-}
+  // Cria o botão
+  const botaoSorteio = document.createElement('button');
+  botaoSorteio.textContent = "🎲 Sortear Receita";
+  botaoSorteio.id = "btnSorteioFiltro";
+
+  // Estilo base
+  Object.assign(botaoSorteio.style, {
+    backgroundColor: '#ff9800',
+    color: 'white',
+    border: 'none',
+    padding: '10px 18px',
+    borderRadius: '6px',
+    fontWeight: 'bold',
+    cursor: 'pointer',
+    transition: '0.3s',
+    height: '40px',
+    alignSelf: 'center',
+  });
+
+  botaoSorteio.addEventListener('mouseenter', () => {
+    botaoSorteio.style.backgroundColor = '#ffa726';
+    botaoSorteio.style.transform = 'scale(1.05)';
+  });
+  botaoSorteio.addEventListener('mouseleave', () => {
+    botaoSorteio.style.backgroundColor = '#ff9800';
+    botaoSorteio.style.transform = 'scale(1)';
+  });
+
+  // Adiciona dentro do container do filtro
+  filtroContainer.appendChild(botaoSorteio);
+
+  // Função de sorteio
+  botaoSorteio.addEventListener('click', () => {
+    const nomes = [...document.querySelectorAll('.titulo-receita')].map(e => e.textContent);
+    if (nomes.length === 0) {
+      mostrarToast("😅 Nenhuma receita disponível para sortear!");
+      return;
+    }
+    const sorteada = nomes[Math.floor(Math.random() * nomes.length)];
+    mostrarToast(`🍽️ Que tal preparar: ${sorteada}?`);
+  });
+});
