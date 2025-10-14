@@ -204,11 +204,7 @@ function filtrarReceitas() {
   receitasLista.forEach(r => {
     const nome = r.querySelector('.titulo-receita').textContent.toLowerCase();
     const conteudo = r.textContent.toLowerCase();
-    let cat = 'outra';
-    if (nome.includes('bolo')) cat = 'bolo';
-    else if (nome.includes('panqueca') || nome.includes('macarrão')) cat = 'massa';
-    else if (nome.includes('salada')) cat = 'salada';
-    else if (nome.includes('mousse') || nome.includes('panetone') || nome.includes('risoto')) cat = 'sobremesa';
+    const cat = r.dataset.categoria || 'outra'; // ✅ pega a categoria direto do HTML
 
     const match = conteudo.includes(texto) && (categoria === 'todas' || cat === categoria);
     r.style.display = match ? 'block' : 'none';
@@ -220,6 +216,7 @@ function filtrarReceitas() {
     contador === 1 ? "1 receita encontrada 🍽️" :
     `${contador} receitas encontradas 🍴`;
 }
+
 
 if (campoBusca && selectCategoria) {
   campoBusca.addEventListener('input', filtrarReceitas);
