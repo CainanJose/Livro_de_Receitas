@@ -23,26 +23,55 @@ if (menuToggle && navLinks) {
 // ======================================================
 // 2️⃣ TOAST DE BOAS-VINDAS (Substitui alert chato)
 // ======================================================
+// ======================================================
+// ✅ FUNÇÃO DE TOAST EMPILHÁVEL (sem sobreposição)
+// ======================================================
 function mostrarToast(msg, tempo = 3000) {
+  // Cria contêiner global dos toasts, se ainda não existir
+  let container = document.getElementById('toast-container');
+  if (!container) {
+    container = document.createElement('div');
+    container.id = 'toast-container';
+    Object.assign(container.style, {
+      position: 'fixed',
+      bottom: '20px',
+      right: '20px',
+      display: 'flex',
+      flexDirection: 'column-reverse', // novos toasts abaixo
+      gap: '10px',
+      zIndex: 1000,
+    });
+    document.body.appendChild(container);
+  }
+
+  // Cria o toast individual
   const toast = document.createElement('div');
   toast.textContent = msg;
   Object.assign(toast.style, {
-    position: 'fixed',
-    bottom: '20px',
-    right: '20px',
     background: '#4CAF50',
     color: 'white',
     padding: '10px 20px',
     borderRadius: '8px',
     boxShadow: '0 4px 12px rgba(0,0,0,0.3)',
-    zIndex: 1000,
     opacity: 0,
-    transition: 'opacity 0.5s ease'
+    transition: 'opacity 0.4s ease, transform 0.4s ease',
+    transform: 'translateY(20px)',
+    pointerEvents: 'none',
   });
-  document.body.appendChild(toast);
-  setTimeout(() => (toast.style.opacity = 1), 50);
+
+  // Adiciona ao container
+  container.appendChild(toast);
+
+  // Anima entrada
+  setTimeout(() => {
+    toast.style.opacity = 1;
+    toast.style.transform = 'translateY(0)';
+  }, 50);
+
+  // Remove com fade
   setTimeout(() => {
     toast.style.opacity = 0;
+    toast.style.transform = 'translateY(20px)';
     setTimeout(() => toast.remove(), 500);
   }, tempo);
 }

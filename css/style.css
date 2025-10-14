@@ -987,46 +987,170 @@ nav ul {
 }
 
 /* ==========================================================
-   🌙 MODO ESCURO (Ajuste leve - apenas texto)
+   🌙 MODO ESCURO COMPLETO (Correção visual e contraste)
    ========================================================== */
-
-/* Fundo e texto geral */
 body.dark {
   background-color: #121212;
   color: #f0f0f0;
 }
 
-/* Textos dentro das receitas, listas e descrições */
-body.dark p,
-body.dark li,
-body.dark .descricao,
-body.dark .titulo-receita,
+/* ====== Seções principais ====== */
+body.dark section,
+body.dark main,
+body.dark .receita,
+body.dark #historia,
+body.dark #apresentacao,
+body.dark #dicas,
+body.dark #galeria,
+body.dark #contato,
+body.dark #faq {
+  background-color: #1e1e1e !important;
+  color: #f0f0f0 !important;
+  border-color: #333 !important;
+  box-shadow: none !important;
+}
+
+/* ====== Títulos ====== */
+body.dark h1,
 body.dark h2,
 body.dark h3,
-body.dark h4,
-body.dark label,
-body.dark #resultadoFiltro {
-  color: #222 !important; /* Letras escuras visíveis em fundo branco */
+body.dark h4 {
+  color: #f5f5f5 !important;
 }
 
-/* Campos de busca e selects */
+/* ====== Textos e listas ====== */
+body.dark p,
+body.dark li,
+body.dark ol,
+body.dark ul,
+body.dark .descricao {
+  color: #ddd !important;
+}
+
+/* ====== Cards de receitas ====== */
+body.dark .receita {
+  background-color: #1c1c1c !important;
+  border: 2px solid #4CAF50 !important;
+}
+body.dark .receita h3 {
+  color: #4CAF50 !important;
+}
+body.dark .receita ul,
+body.dark .receita ol {
+  background-color: #2a2a2a !important;
+  border-color: #444 !important;
+}
+body.dark .receita li {
+  color: #ccc !important;
+}
+
+/* ====== Galeria ====== */
+body.dark .grid-galeria img {
+  border-color: #4CAF50 !important;
+  filter: brightness(0.9);
+}
+body.dark .grid-galeria img:hover {
+  filter: brightness(1.1);
+}
+
+/* ====== Dicas ====== */
+body.dark #dicas li {
+  background-color: #2a2a2a !important;
+  color: #eee !important;
+  border-left: 3px solid #ffb300 !important;
+}
+
+/* ====== Formulário ====== */
 body.dark input,
+body.dark textarea,
 body.dark select {
-  background-color: #333;
-  color: #fff;
-  border: 1px solid #555;
+  background-color: #2b2b2b !important;
+  color: #fff !important;
+  border: 1px solid #555 !important;
+}
+body.dark input::placeholder,
+body.dark textarea::placeholder {
+  color: #aaa !important;
 }
 
-/* Mantém botões legíveis */
+/* ====== Botões ====== */
 body.dark button,
 body.dark .btn-social {
-  color: white;
-  border: none;
+  background-color: #4CAF50 !important;
+  color: #fff !important;
+  border: none !important;
+}
+body.dark button:hover,
+body.dark .btn-social:hover {
+  background-color: #45a049 !important;
 }
 
-/* Rodapé */
+/* ====== Cabeçalho e menu ====== */
+body.dark #cabecalho-principal {
+  background-color: #222 !important;
+  color: #fff !important;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.6);
+}
+body.dark nav ul li a {
+  color: #fff !important;
+}
+body.dark nav ul li a.active {
+  color: #f39c12 !important;
+}
+
+/* ====== Rodapé ====== */
 body.dark footer {
-  background-color: #111;
-  color: #ccc;
+  background-color: #1a1a1a !important;
+  color: #ccc !important;
   border-top: 3px solid #4CAF50;
+}
+/* ==========================================================
+   🌙 AJUSTES EXCLUSIVOS - PÁGINA DE RECEITAS (MODO ESCURO)
+   ========================================================== */
+body.dark .receita {
+  background-color: #1b1b1b !important;
+  color: #eee !important;
+  border: 2px solid #4CAF50 !important;
+}
+
+/* Cabeçalho da receita (título com faixa verde clara) */
+body.dark .titulo-receita {
+  background-color: #2a2a2a !important;
+  border-bottom: 3px double #4CAF50 !important;
+  color: #4CAF50 !important;
+}
+
+/* Descrição da receita (aquele retângulo cinza-claro abaixo da imagem) */
+body.dark .descricao {
+  background-color: #262626 !important;
+  color: #ccc !important;
+  border-left: 4px solid #4CAF50 !important;
+}
+
+/* Bloco de ingredientes e preparo */
+body.dark .receita ul,
+body.dark .receita ol {
+  background-color: #222 !important;
+  border: 1px solid #444 !important;
+}
+
+body.dark .receita li {
+  color: #ddd !important;
+}
+
+/* Ícones e negritos (melhor contraste) */
+body.dark strong,
+body.dark b {
+  color: #fff !important;
+}
+
+/* Tempo e porções */
+body.dark .receita p {
+  color: #ccc !important;
+}
+
+/* Fundo e borda das imagens */
+body.dark .imagem-receita {
+  background-color: #1a1a1a !important;
+  border: 3px solid #4CAF50 !important;
 }
