@@ -302,56 +302,63 @@ const dicasRapidas = [
   "🔥 Pré-aqueça o forno para assar com temperatura ideal.",
   "🌿 Ervas frescas devem ser adicionadas no final da receita."
 ];
-window.addEventListener('load', () => {
-  const dica = dicasRapidas[Math.floor(Math.random() * dicasRapidas.length)];
-  mostrarToast(`💡 Dica do dia: ${dica}`, 6000);
-});
 // ======================================================
 // 🎲 BOTÃO "SORTEAR RECEITA" AO LADO DO FILTRO
+// 🖼️ GALERIA: SELECIONAR IMAGEM (destacar borda ao clicar)
 // ======================================================
 window.addEventListener('DOMContentLoaded', () => {
+
+  // --- 🎲 BOTÃO SORTEAR RECEITA ---
   const filtroContainer = document.querySelector('.filtro-container');
-  if (!filtroContainer) return; // só aparece na página de receitas
+  if (filtroContainer) {
+    const botaoSorteio = document.createElement('button');
+    botaoSorteio.textContent = "🎲 Sortear Receita";
+    botaoSorteio.id = "btnSorteioFiltro";
+    Object.assign(botaoSorteio.style, {
+      backgroundColor: '#ff9800',
+      color: 'white',
+      border: 'none',
+      padding: '10px 18px',
+      borderRadius: '6px',
+      fontWeight: 'bold',
+      cursor: 'pointer',
+      transition: '0.3s',
+      height: '40px',
+      alignSelf: 'center',
+    });
 
-  // Cria o botão
-  const botaoSorteio = document.createElement('button');
-  botaoSorteio.textContent = "🎲 Sortear Receita";
-  botaoSorteio.id = "btnSorteioFiltro";
+    botaoSorteio.addEventListener('mouseenter', () => {
+      botaoSorteio.style.backgroundColor = '#ffa726';
+      botaoSorteio.style.transform = 'scale(1.05)';
+    });
+    botaoSorteio.addEventListener('mouseleave', () => {
+      botaoSorteio.style.backgroundColor = '#ff9800';
+      botaoSorteio.style.transform = 'scale(1)';
+    });
 
-  // Estilo base
-  Object.assign(botaoSorteio.style, {
-    backgroundColor: '#ff9800',
-    color: 'white',
-    border: 'none',
-    padding: '10px 18px',
-    borderRadius: '6px',
-    fontWeight: 'bold',
-    cursor: 'pointer',
-    transition: '0.3s',
-    height: '40px',
-    alignSelf: 'center',
-  });
+    filtroContainer.appendChild(botaoSorteio);
 
-  botaoSorteio.addEventListener('mouseenter', () => {
-    botaoSorteio.style.backgroundColor = '#ffa726';
-    botaoSorteio.style.transform = 'scale(1.05)';
-  });
-  botaoSorteio.addEventListener('mouseleave', () => {
-    botaoSorteio.style.backgroundColor = '#ff9800';
-    botaoSorteio.style.transform = 'scale(1)';
-  });
+    botaoSorteio.addEventListener('click', () => {
+      const nomes = [...document.querySelectorAll('.titulo-receita')].map(e => e.textContent);
+      if (nomes.length === 0) {
+        mostrarToast("😅 Nenhuma receita disponível para sortear!");
+        return;
+      }
+      const sorteada = nomes[Math.floor(Math.random() * nomes.length)];
+      mostrarToast(`🍽️ Que tal preparar: ${sorteada}?`);
+    });
+  }
 
-  // Adiciona dentro do container do filtro
-  filtroContainer.appendChild(botaoSorteio);
-
-  // Função de sorteio
-  botaoSorteio.addEventListener('click', () => {
-    const nomes = [...document.querySelectorAll('.titulo-receita')].map(e => e.textContent);
-    if (nomes.length === 0) {
-      mostrarToast("😅 Nenhuma receita disponível para sortear!");
-      return;
-    }
-    const sorteada = nomes[Math.floor(Math.random() * nomes.length)];
-    mostrarToast(`🍽️ Que tal preparar: ${sorteada}?`);
-  });
+  // --- 🖼️ GALERIA: SELEÇÃO DE IMAGEM ---
+  const imagensGaleria = document.querySelectorAll('.grid-galeria img');
+  if (imagensGaleria.length > 0) {
+    imagensGaleria.forEach(img => {
+      img.addEventListener('click', () => {
+        img.classList.add('selecionada');
+        const nome = img.alt || 'Imagem selecionada';
+        mostrarToast(`📸 Selecionou: ${nome}`);
+      });
+    });
+  }
 });
+

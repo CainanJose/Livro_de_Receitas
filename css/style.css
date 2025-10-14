@@ -1264,3 +1264,52 @@ body.dark #curiosidades li {
 body.dark #curiosidades li:hover {
   background-color: #333;
 }
+
+
+/* ==========================================================
+   🖼️ GALERIA - EFEITO DE SELEÇÃO DE IMAGEM
+   ========================================================== */
+
+/* Estado normal */
+.grid-galeria img {
+  border: 3px solid transparent;
+  border-radius: 8px;
+  transition: transform 0.3s, border-color 0.3s, box-shadow 0.3s;
+  cursor: pointer;
+}
+
+/* Hover visual (passar o mouse) */
+.grid-galeria img:hover {
+  transform: scale(1.03);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+  border-color: #81c784; /* verde claro */
+}
+
+/* Quando a imagem for clicada (selecionada) */
+.grid-galeria img.selecionada {
+  border: 3px solid #4CAF50; /* verde principal */
+  box-shadow: 0 0 12px rgba(76, 175, 80, 0.6);
+  transform: scale(1.05);
+}
+
+/* 🌙 Modo escuro - muda o destaque */
+body.dark .grid-galeria img.selecionada {
+  border-color: #fbc02d; /* amarelo */
+  box-shadow: 0 0 14px rgba(255, 215, 64, 0.7);
+}
+/* ==========================================================
+   ✨ EFEITO PULSAR NA IMAGEM SELECIONADA
+   ========================================================== */
+@keyframes pulsarBorda {
+  0%, 100% { box-shadow: 0 0 12px rgba(76, 175, 80, 0.6); }
+  50% { box-shadow: 0 0 20px rgba(76, 175, 80, 0.9); }
+}
+
+.grid-galeria img.selecionada {
+  animation: pulsarBorda 1s ease-in-out infinite alternate;
+}
+
+body.dark .grid-galeria img.selecionada {
+  animation: pulsarBorda 1s ease-in-out infinite alternate;
+  box-shadow: 0 0 14px rgba(255, 215, 64, 0.7);
+}
