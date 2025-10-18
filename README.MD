@@ -1,4 +1,4 @@
-🍲 Livro de Receitas
+ Livro de Receitas
 📚 Descrição do Projeto
 
 Pequeno site interativo e responsivo que reúne receitas, dicas e galeria culinária, desenvolvido com HTML5, CSS3 e JavaScript puro.
