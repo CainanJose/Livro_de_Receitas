@@ -1314,3 +1314,74 @@ body.dark .grid-galeria img.selecionada {
   box-shadow: 0 0 14px rgba(255, 215, 64, 0.7);
 }
 
+/* ==========================================================
+   🎬 SEÇÃO DE VÍDEOS E ÁUDIOS
+   ========================================================== */
+
+.videos,
+.audios {
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Centraliza vídeos e áudios horizontalmente */
+  justify-content: center;
+  gap: 20px;
+  margin: 30px auto;
+  width: 90%;
+  text-align: center;
+}
+
+/* ===============================
+   🎥 TÍTULOS DAS SEÇÕES
+   =============================== */
+h3 {
+  text-align: center;              /* ✅ Centraliza os títulos na tela */
+  width: 100%;
+  font-weight: bold;
+  color: #2e7d32;                 /* Verde escuro */
+  margin-top: 30px;
+  margin-bottom: 15px;
+  border-bottom: 2px solid #81c784;
+  display: inline-block;
+  padding-bottom: 5px;
+}
+
+/* ===============================
+   🎞️ VÍDEOS
+   =============================== */
+.videos video {
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.videos video:hover {
+  transform: scale(1.03);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.3);
+}
+
+/* ===============================
+   🎧 ÁUDIOS
+   =============================== */
+.audios audio {
+  width: 80%;
+  max-width: 400px;
+  margin-top: 10px;
+  border-radius: 6px;
+  outline: none;
+}
+
+/* ==========================================================
+   🌙 MODO ESCURO
+   ========================================================== */
+body.dark h3 {
+  color: #81c784;                 /* Verde claro */
+  border-bottom-color: #4CAF50;
+}
+
+body.dark .videos video {
+  box-shadow: 0 0 10px rgba(76, 175, 80, 0.4);
+}
+
+body.dark .audios p {
+  color: #eee;
+}
