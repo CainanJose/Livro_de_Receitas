@@ -1,180 +1,312 @@
- Livro de Receitas
-📚 Descrição do Projeto
+# 🍲 Livro de Receitas
 
-Pequeno site interativo e responsivo que reúne receitas, dicas e galeria culinária, desenvolvido com HTML5, CSS3 e JavaScript puro.
-O projeto foca em design intuitivo, interatividade, organização de código e boas práticas de front-end — simulando um portal real de receitas.
+> **Portal interativo desenvolvido com HTML5, CSS3 e JavaScript puro**, reunindo receitas, dicas e curiosidades culinárias com design responsivo, modo escuro, e múltiplas funcionalidades dinâmicas.  
+> Criado com foco em boas práticas de **Front-End**, **organização de código**, **UX/UI** e **acessibilidade**.
 
-⚙️ Funcionalidades JavaScript
+---
 
-📱 Menu Mobile (toggle) — abre e fecha o menu com animação.
+## 🧭 Sumário
 
-👋 Toast de boas-vindas — mensagem automática com fade-in e fade-out.
+1. [📘 Visão Geral](#-visão-geral)  
+2. [🎯 Objetivos do Projeto](#-objetivos-do-projeto)  
+3. [⚙️ Funcionalidades](#️-funcionalidades)  
+4. [🧱 Estrutura de Pastas](#-estrutura-de-pastas)  
+5. [🌐 Páginas e Recursos](#-páginas-e-recursos)  
+6. [💡 Tecnologias Utilizadas](#-tecnologias-utilizadas)  
+7. [📈 Design e Responsividade](#-design-e-responsividade)  
+8. [🌙 Modo Escuro](#-modo-escuro)  
+9. [🎨 Estilo e UX/UI](#-estilo-e-uxui)  
+10. [🧠 Lógica JavaScript](#-lógica-javascript)  
+11. [🚀 Como Executar Localmente](#-como-executar-localmente)  
+12. [🔍 Detalhamento por Página](#-detalhamento-por-página)  
+13. [🧾 Requisitos e Entregáveis](#-requisitos-e-entregáveis)  
+14. [📦 Versões e Evolução](#-versões-e-evolução)  
+15. [🧩 Aprendizagens e Competências](#-aprendizagens-e-competências)  
+16. [🧑‍💻 Autor e Créditos](#-autor-e-créditos)  
+17. [📜 Licença](#-licença)  
 
-⏰ Atualização automática da hora — exibe data e hora em tempo real.
+---
 
-⬆️ Botão “Voltar ao topo” — rolagem suave para o início da página.
+## 📘 Visão Geral
 
-🌗 Modo Claro/Escuro — tema persistente com localStorage.
+O **Livro de Receitas** é um projeto front-end completo que combina:
 
-🔍 Filtro de receitas — busca por nome e categoria via data-categoria.
+- Estrutura semântica em **HTML5**
+- Estilos refinados e responsivos com **CSS3 (Flexbox + Grid)**
+- Interatividade, animações e lógica em **JavaScript puro**
 
-🧩 Animações de entrada — cards de receitas surgem com transição suave.
+O projeto simula um **portal culinário profissional**, com páginas integradas, recursos dinâmicos e modo escuro persistente.  
+Cada arquivo segue uma padronização modular e comentada, destacando clareza e boas práticas.
 
-🖼️ Zoom em imagens — efeito ao passar o mouse ou clicar na galeria.
+---
 
-📬 Formulário de contato — validação e feedback visual com toast.
+## 🎯 Objetivos do Projeto
 
-💤 Mensagem de inatividade — alerta automático após 60s sem interação.
+- Demonstrar domínio de **HTML, CSS e JavaScript**
+- Criar uma aplicação **responsiva e funcional**
+- Aplicar conceitos de **UX/UI Design**
+- Implementar **modo escuro persistente com localStorage**
+- Praticar **animações, filtros e eventos DOM**
+- Desenvolver um **site completo**, com múltiplas páginas interativas
 
-🎲 Botão “Sortear Receita” — escolhe aleatoriamente uma receita da tela.
+---
 
-🌙 Modo escuro completo — todas as seções adaptadas para contraste ideal.
+## ⚙️ Funcionalidades
 
-🧱 Estrutura do Projeto
+| Função | Descrição |
+|:--|:--|
+| 📱 **Menu Mobile** | Abre e fecha o menu de navegação no celular. |
+| 👋 **Toast de boas-vindas** | Saudação automática ao carregar a página. |
+| ⏰ **Relógio Dinâmico** | Exibe data e hora atualizadas em tempo real. |
+| 🌗 **Modo Claro/Escuro** | Alterna o tema e mantém a escolha salva. |
+| 💤 **Mensagem de Inatividade** | Alerta após 60s sem interação. |
+| 🔍 **Filtro de Receitas** | Busca por nome e categoria (data-categoria). |
+| 🎲 **Botão “Sortear Receita”** | Escolhe uma receita aleatoriamente. |
+| 🧁 **Animações de Entrada** | Cards aparecem suavemente com fade-in. |
+| 🖼️ **Galeria Interativa** | Zoom, pulsação e seleção visual nas imagens. |
+| 🎧 **Áudio Motivacional** | Reproduz sons/efeitos com controle JS. |
+| 📬 **Formulário Validado** | Campos obrigatórios com toast de sucesso. |
+| ❓ **FAQ Dinâmico** | Expande/responde perguntas com transição. |
+| ⬆️ **Botão “Voltar ao Topo”** | Rolagem suave de retorno. |
+| 💬 **Toasts Empilháveis** | Mensagens flutuantes empilhadas no canto. |
+| 🌙 **Dark Mode Completo** | Estilo coerente para todas as seções. |
+
+---
+
+## 🧱 Estrutura de Pastas
+
 📁 css/
-│   └── style.css        → estilos completos (reset, flexbox, animações, dark mode)
+│ └── style.css → Estilos principais, dark mode e responsividade
 📁 js/
-│   └── script.js        → todas as funcionalidades dinâmicas e interativas
-📁 imagens/              → assets das receitas, galeria e ícones
-📄 index.html            → página inicial com apresentação do site
-📄 receitas.html         → lista interativa de receitas filtráveis
-📄 dicas.html            → dicas e curiosidades culinárias clicáveis
-📄 galeria.html          → galeria com zoom e seleção de imagens
-📄 contato.html          → formulário validado e seção FAQ
-📄 README.md             → documentação completa do projeto
+│ └── script.js → Funções interativas e animações JS
+📁 imagens/ → Assets, ícones e fotos de receitas
+📁 audio/ → audios utilizados
+📁 video/ → videos utilizados
+---
+
+## 🌐 Páginas e Recursos
+
+📄 index.html → Página inicial (introdução e apresentação)
+📄 receitas.html → Listagem com cards e filtro dinâmico
+📄 dicas.html → Dicas e curiosidades culinárias
+📄 galeria.html → Galeria com imagens, vídeos e áudios
+📄 contato.html → Formulário de contato e FAQ
+📄 README.md → Documentação do projeto
 
 
-📄 Páginas do Projeto (Descrição Individual)
-🏠 index.html — Página Inicial
+---
 
-Apresenta o título do projeto e a introdução ao portal de receitas.
+## 🌐 Páginas e Recursos
 
-Contém história e missão do site.
+### 🏠 **index.html**
+Apresenta o projeto, sua proposta e introdução visual.  
+Inclui chamadas para outras páginas e animação de entrada.
 
-Possui link direto para a seção de receitas e botões de navegação.
+**Recursos usados:** Flexbox · Botões sociais · Responsividade total  
 
-É o primeiro contato do usuário, com animação suave e design limpo.
+---
 
-🔹 Tecnologias aplicadas: Flexbox, tipografia sem serifa, contraste de cores, responsividade completa.
+### 📖 **receitas.html**
+Página principal com **cards interativos** e **filtro automático**.  
+Cada card inclui imagem, ingredientes, preparo e categoria (`data-categoria`).
 
-📖 receitas.html — Página de Receitas
+**Destaques técnicos:**
+- Filtro dinâmico via eventos `input` e `change`
+- Botão “Sortear Receita”
+- Animação `fadeInUp` em cada card
+- Toast com feedback das ações do usuário
 
-Principal página do site.
+---
 
-Contém filtro de busca (por nome e categoria) e botão 🎲 “Sortear Receita”.
+### 💡 **dicas.html**
+Lista de dicas práticas e **curiosidades culinárias** com ícones.  
+Cada dica é clicável e dispara uma notificação visual.
 
-Cada receita é um card interativo com imagem, descrição, ingredientes e preparo.
+**Destaques técnicos:**
+- Interação via `addEventListener('click')`
+- Fundo temático (#fffbea)
+- Total integração com modo escuro
+- Animação hover em listas
 
-O JS controla animações de entrada, filtro dinâmico e notificações (toasts).
+---
 
-🔹 Destaques técnicos:
+### 🖼️ **galeria.html**
+Galeria com imagens, vídeos e áudio.  
+As imagens têm **efeito de zoom**, **seleção pulsante** e **toast com nome da receita**.
 
-data-categoria aplicado em cada <section class="receita"> para facilitar filtragem.
+**Destaques:**
+- Classe `.ativo` alternada pelo JS
+- Efeito de “pulsar” contínuo via `@keyframes`
+- Controle de borda e sombra no clique
+- Transições suaves e elegantes
 
-Filtro em tempo real com eventos input e change.
+---
 
-Modo escuro adaptado para cards e textos.
+### 📬 **contato.html**
+Formulário funcional com validação de campos e toast de sucesso.  
+Contém também uma seção de **FAQ** e botões de redes sociais.
 
-💡 dicas.html — Página de Dicas
+**Recursos JS:**
+- Evento `submit` interceptado com `preventDefault()`
+- Reset automático dos campos
+- Feedback visual com toasts animados
 
-Reúne uma lista de dicas rápidas de cozinha com emojis e estilo descontraído.
+---
 
-Ao clicar em cada dica, o usuário recebe um toast personalizado.
+## 💡 Tecnologias Utilizadas
 
-Inclui uma seção “Curiosidades Culinárias” com estilo próprio e hover suave.
+| Tecnologia | Uso Principal |
+|-------------|---------------|
+| **HTML5** | Estrutura semântica das páginas |
+| **CSS3** | Estilização, Flexbox, Grid, animações |
+| **JavaScript** | Lógica, eventos DOM, interatividade |
+| **Vercel** | Hospedagem e deploy automático |
+| **GitHub** | Versionamento e controle de versões |
+| **LocalStorage** | Persistência do tema escuro |
 
-🔹 Destaques técnicos:
+---
 
-Interatividade simples via addEventListener('click').
+## 📈 Design e Responsividade
 
-CSS com fundo temático (#fffbea) e borda lateral verde.
+- Layout fluido usando **Flexbox** e **Grid**
+- Páginas 100% responsivas (breakpoint `768px`)
+- Elementos adaptáveis com `max-width` e `auto-fit`
+- Menu “hambúrguer” funcional no mobile
+- Tamanhos e espaçamentos proporcionais (rem, %)
 
-Total compatibilidade com modo escuro (background: #1e1e1e).
+---
 
-🖼️ galeria.html — Página da Galeria
+## 🌙 Modo Escuro
 
-Mostra uma coleção de imagens e vídeos culinários, e um pequeno áudio inspiracional.
+- Implementado via `classList.toggle('dark')`
+- Tema salvo no `localStorage`
+- Adapta cores de fundo, texto, bordas e ícones
+- Contraste testado com **WCAG** (acessibilidade)
+- Transição suave com `transition: 0.3s ease`
 
-Cada imagem é clicável, ganhando destaque visual e borda colorida ao ser selecionada.
+---
 
-O JS exibe mensagem “📸 Selecionou: nome da imagem” via toast.
+## 🎨 Estilo e UX/UI
 
-Os vídeos são incorporados do YouTube (uso de <iframe>).
+- Paleta de cores baseada em tons de **verde (tema principal)**  
+- Ícones e emojis contextualizados para melhor leitura  
+- Espaçamento e tipografia otimizados para conforto visual  
+- Botões animados com `:hover` e `transform: scale()`  
+- Cards com `box-shadow` e efeito de elevação  
+- Scroll suave e feedback visual em todas as ações  
 
-🔹 Destaques técnicos:
+---
 
-Eventos click e mouseenter nas imagens.
+## 🧠 Lógica JavaScript
 
-Classe .selecionada aplicada dinamicamente no JS.
+- Modularização por seções comentadas  
+- Uso de `querySelectorAll`, `forEach`, `addEventListener`  
+- Controle de estado com classes (`ativo`, `selecionada`)  
+- Funções anônimas e arrow functions  
+- Sistema de **toasts empilháveis**  
+- Estrutura de **condicionais encadeadas** para filtros  
+- Integração com o DOM e uso de `localStorage`  
 
-Transição suave e efeito de “pulsar” na imagem ativa.
+---
 
-Toast e filtro integrados ao modo escuro.
+## 🚀 Como Executar Localmente
 
-📬 contato.html — Página de Contato
+### 1️⃣ Clone o repositório
+```bash
+git clone https://github.com/CainanJose/Livro_de_Receitas.git
 
-Contém formulário funcional com validação de campos e toast de sucesso.
+### 2️⃣ Acesse o diretório
 
-Campos: nome, e-mail e mensagem.
+cd Livro_de_Receitas
 
-Ao enviar, o JS previne recarregamento (e.preventDefault()), reseta o formulário e mostra feedback.
+### 3️⃣ Abra o projeto no navegador
 
-Seção extra de FAQ com perguntas frequentes estilizadas.
+start index.html
 
-🔹 Destaques técnicos:
+ou simplesmente arraste o arquivo index.html para seu navegador.
 
-Eventos submit e click para interação.
+💡 Não há dependências externas — o projeto roda 100% localmente.
 
-Animações suaves e feedback visual imediato.
+🔍 Detalhamento por Página
+Página	Descrição	Destaques
+index.html	Apresentação inicial	Botões de navegação, animações, design centralizado
+receitas.html	Cards e filtro dinâmico	Busca por nome/categoria, botão “Sortear Receita”
+dicas.html	Dicas rápidas	Toasts personalizados e hover temático
+galeria.html	Galeria multimídia	Zoom, pulsação, vídeos e áudio
+contato.html	Formulário funcional	Validação, FAQ e botões sociais
+🧾 Requisitos e Entregáveis
 
-Responsivo e adaptado ao modo escuro.
-🧾 Requisitos Atendidos
+✅ 500+ linhas de HTML
 
-✅ +500 linhas no HTML
-✅ +400 linhas no CSS
-✅ +300 linhas no JS
-✅ Código limpo e comentado
-✅ Estrutura modular e responsiva
-✅ Versionamento contínuo no GitHub
-✅ Publicação online funcional
+✅ 400+ linhas de CSS
 
-🚀 Demonstração
+✅ 300+ linhas de JS
 
-🔗 Deploy (Vercel): https://guia-receitas.vercel.app/
+✅ Estrutura modular e comentada
 
-📂 Repositório GitHub: https://github.com/CainanJose/Livro_de_Receitas.git
+✅ Design 100% responsivo
 
-🧠 Aprendizagens Obtidas
+✅ Deploy funcional na Vercel
 
-Estruturação semântica completa com HTML5.
+✅ Repositório com commits contínuos
 
-Criação de layouts fluidos com Flexbox e Grid.
+🧩 Aprendizagens e Competências
 
-Implementação de modo escuro com persistência via localStorage.
+🌐 Técnicas
 
-Uso de atributos data-* para filtros dinâmicos de categorias.
+Estrutura semântica com tags HTML5
 
-Manipulação e animação de elementos com JavaScript puro.
+Organização modular de CSS (reset, layout, seções, animações)
 
-Aplicação de boas práticas de UX/UI (feedback visual, transições suaves, toasts).
+Uso de @media queries e unidades relativas
 
-Versionamento e deploy profissional com GitHub + Vercel.
+Implementação de modo escuro com persistência
 
-Organização modular do código com comentários e seções numeradas.
+Manipulação do DOM com JavaScript puro
 
-📈 Evolução do Projeto
-Etapa	Descrição
-v1.0	Estrutura inicial HTML/CSS estática.
-v2.0	Implementação do JS, modo escuro, animações e responsividade.
-v3.0	Adição de filtro de receitas, botão de sorteio, galeria interativa e toasts empilháveis.
-v3.1 (final)	Refinamento de UX, correção de contraste, minificação do JS e otimização para deploy.
+Tratamento de eventos (click, submit, input)
+
+Aplicação de feedback visual em UX (toasts, hover, transições)
+
+Uso de localStorage e boas práticas de performance
+
+💭 Conceituais
+
+Responsividade e design centrado no usuário
+
+Acessibilidade visual e contraste
+
+Organização de código e comentários explicativos
+
+Planejamento modular de páginas
+
+Deploy e versionamento profissional
+
+🧑‍💻 Autor e Créditos
+### 👥 **Integrantes do Grupo**
+
+| Nome Completo | RA |
+|----------------|----|
+| **Cainã José Arruda Pinto** | 210626 |
+| **João Vitor Aguiar da Silva** | 249041 |
+| **Ketyllyn** | 247945 |
+| **Lucas Toledo Cappello** | 240433 |
+| **Rui Anderson** | 24866 |
+
+🎓 Estudante de Engenharia / Desenvolvimento Web
+💼 Estagiário de TI — Chemyunion
+💡 Foco em automação, dashboards e aplicações interativas
+
+
+🐙 GitHub: https://github.com/CainanJose/Livro_de_Receitas.git
 
 📜 Licença
 
-Este projeto é de uso livre para fins educacionais.
-📘 MIT License — Você pode usar, modificar e redistribuir, desde que cite a autoria.
+Este projeto é distribuído sob a MIT License.
+Você pode usar, modificar e redistribuir livremente, citando a autoria.
 
-💬 Resumo Final
+💬 Mensagem Final
 
-“O Livro de Receitas representa o domínio das bases da Web — transformando HTML, CSS e JavaScript em um produto funcional, bonito e responsivo.
-O projeto une técnica, criatividade e boas práticas de programação em um só prato.” 🍽️
+“O Livro de Receitas representa o equilíbrio entre criatividade e técnica.
+Cada linha de código é um ingrediente que transforma aprendizado em experiência prática.
+Cozinhar e programar têm algo em comum: ambos unem paixão, precisão e arte.” 🍽️
