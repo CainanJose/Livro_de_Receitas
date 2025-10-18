@@ -93,11 +93,6 @@ Cada arquivo segue uma padronização modular e comentada, destacando clareza e 
 📄 contato.html → Formulário de contato e FAQ
 📄 README.md → Documentação do projeto
 
-
----
-
-## 🌐 Páginas e Recursos
-
 ### 🏠 **index.html**
 Apresenta o projeto, sua proposta e introdução visual.  
 Inclui chamadas para outras páginas e animação de entrada.
@@ -211,36 +206,42 @@ Contém também uma seção de **FAQ** e botões de redes sociais.
 
 ## 🚀 Como Executar Localmente
 
+## 🚀 Como Executar Localmente
+
 ### 1️⃣ Clone o repositório
-```bash
+
 git clone https://github.com/CainanJose/Livro_de_Receitas.git
-
-### 2️⃣ Acesse o diretório
-
+2️⃣ Acesse o diretório
 cd Livro_de_Receitas
 
-### 3️⃣ Abra o projeto no navegador
-
+3️⃣ Abra o projeto no navegador
 start index.html
 
-ou simplesmente arraste o arquivo index.html para seu navegador.
+
+ou simplesmente arraste o arquivo index.html para o navegador.
 
 💡 Não há dependências externas — o projeto roda 100% localmente.
 
-🔍 Detalhamento por Página
+---
+
+
+### 🔍 Detalhamento por Página
 Página	Descrição	Destaques
 index.html	Apresentação inicial	Botões de navegação, animações, design centralizado
 receitas.html	Cards e filtro dinâmico	Busca por nome/categoria, botão “Sortear Receita”
 dicas.html	Dicas rápidas	Toasts personalizados e hover temático
 galeria.html	Galeria multimídia	Zoom, pulsação, vídeos e áudio
 contato.html	Formulário funcional	Validação, FAQ e botões sociais
-🧾 Requisitos e Entregáveis
+
+---
+
+### 🧾 Requisitos e Entregáveis
 
 ✅ 500+ linhas de HTML
 
 ✅ 400+ linhas de CSS
 
-✅ 300+ linhas de JS
+✅ 300+ linhas de JavaScript
 
 ✅ Estrutura modular e comentada
 
@@ -250,8 +251,10 @@ contato.html	Formulário funcional	Validação, FAQ e botões sociais
 
 ✅ Repositório com commits contínuos
 
-🧩 Aprendizagens e Competências
+---
 
+
+### 🧩 Aprendizagens e Competências
 🌐 Técnicas
 
 Estrutura semântica com tags HTML5
@@ -260,15 +263,15 @@ Organização modular de CSS (reset, layout, seções, animações)
 
 Uso de @media queries e unidades relativas
 
-Implementação de modo escuro com persistência
+Implementação de modo escuro com persistência (localStorage)
 
 Manipulação do DOM com JavaScript puro
 
 Tratamento de eventos (click, submit, input)
 
-Aplicação de feedback visual em UX (toasts, hover, transições)
+Aplicação de feedback visual (toasts, hover, transições)
 
-Uso de localStorage e boas práticas de performance
+Boas práticas de performance e acessibilidade
 
 💭 Conceituais
 
@@ -276,31 +279,30 @@ Responsividade e design centrado no usuário
 
 Acessibilidade visual e contraste
 
-Organização de código e comentários explicativos
+Organização e documentação do código
 
 Planejamento modular de páginas
 
 Deploy e versionamento profissional
 
-🧑‍💻 Autor e Créditos
-### 👥 **Integrantes do Grupo**
+---
 
-| Nome Completo | RA |
-|----------------|----|
-| **Cainã José Arruda Pinto** | 210626 |
-| **João Vitor Aguiar da Silva** | 249041 |
-| **Ketyllyn** | 247945 |
-| **Lucas Toledo Cappello** | 240433 |
-| **Rui Anderson** | 24866 |
+### 🧑‍💻 Autor e Créditos
+👥 Integrantes do Grupo
+Nome Completo	RA
+Cainã José Arruda Pinto	210626
+João Vitor Aguiar da Silva	249041
+Ketyllyn	247945
+Lucas Toledo Cappello	240433
+Rui Anderson	24866
 
-🎓 Estudante de Engenharia / Desenvolvimento Web
-💼 Estagiário de TI — Chemyunion
-💡 Foco em automação, dashboards e aplicações interativas
+🎓 Curso: Engenharia da Computação
+🏫 Instituição: FACENS – Faculdade de Engenharia de Sorocaba
 
 
-🐙 GitHub: https://github.com/CainanJose/Livro_de_Receitas.git
+---
 
-📜 Licença
+### 📜 Licença
 
 Este projeto é distribuído sob a MIT License.
 Você pode usar, modificar e redistribuir livremente, citando a autoria.
